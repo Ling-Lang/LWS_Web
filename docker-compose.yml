@@ -1,7 +1,9 @@
 services:
   caddy:
-    image: caddy:2.8.4-l4
-    container_name: caddy-l4
+    image: caddy:latest
+    container_name: caddy
+    ports:
+      - 80:80
     volumes:
       - ./Caddyfile:/etc/caddy/Caddyfile
       - ./data:/data
